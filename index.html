@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-169329676-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-169329676-1");
+    </script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Katherine Hoang - front-end web developer"
+    />
+    <meta name="keywords" content="Front-end, developer" />
+    <title>Katherine Hoang</title>
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="preload"
+      as="style"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
+    />
+    <style>
+      html {
+        box-sizing: border-box;
+      }
+
+      *,
+      *:before,
+      *:after {
+        box-sizing: inherit;
+      }
+
+      body,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      ol,
+      ul {
+        margin: 0;
+        padding: 0;
+        font-weight: normal;
+      }
+
+      ol,
+      ul {
+        list-style: none;
+      }
+
+      /* end of css reset */
+
+      :root {
+        --color-background: #fff;
+        --color-primary-text: #5a5a5a;
+        --color-secondary-text: #c7c7c7;
+        --color-primary: #bd54a4;
+        --color-secondary: #e463c6;
+        --color-accent: #fff0fe;
+      }
+
+      body,
+      html {
+        width: 100%;
+        height: 100%;
+        font-size: 16px;
+        font-family: "Montserrat", sans-serif;
+        line-height: 1.4;
+        background-color: var(--color-accent);
+        color: var(--color-primary-text);
+      }
+
+      .container {
+        padding: 1rem;
+        max-width: 960px;
+        margin: 0 auto;
+        background-color: var(--color-background);
+        min-height: 100%;
+      }
+
+      .header {
+        margin-bottom: 2rem;
+      }
+
+      .name {
+        font-weight: bold;
+        text-transform: uppercase;
+        line-height: 1;
+      }
+
+      .firstName {
+        display: block;
+        color: var(--color-secondary);
+        font-size: 5rem;
+      }
+
+      .secondName {
+        display: block;
+        color: var(--color-primary);
+        font-size: 4rem;
+      }
+
+      .pageSubtitle {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .profilePic {
+        position: relative;
+        border-radius: 100%;
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+        margin-bottom: 2rem;
+        overflow: hidden;
+        box-shadow: 0 0 0px 4px var(--color-background),
+          0 0px 0px 6px var(--color-secondary);
+      }
+
+      .profilePic-image {
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+        object-fit: cover;
+      }
+
+      .section:not(:last-child) {
+        margin-bottom: 2rem;
+      }
+
+      .sectionHeader {
+        color: var(--color-primary);
+        text-transform: uppercase;
+        margin-bottom: 0.5rem;
+      }
+
+      .links {
+        display: flex;
+      }
+
+      .link {
+        display: block;
+        width: 50px;
+        list-style: none;
+      }
+
+      .linkContainer:not(:last-child) {
+        margin-right: 1rem;
+      }
+
+      .link:hover {
+        filter: brightness(0.85);
+      }
+
+      .jobTitle {
+        margin-bottom: 0.5rem;
+      }
+
+      @media screen and (min-width: 640px) {
+        .container {
+          display: grid;
+          grid-template-columns: 1fr 2fr;
+          grid-template-areas:
+            "pic header "
+            "side content";
+          align-content: center;
+          padding: 4rem;
+          column-gap: 4rem;
+          row-gap: 1rem;
+        }
+
+        .header {
+          grid-area: header;
+          align-self: center;
+          margin-bottom: 0;
+        }
+
+        .profilePic {
+          grid-area: pic;
+          margin: 0;
+          justify-self: end;
+        }
+
+        .pageSubtitle {
+          margin: 0;
+        }
+
+        .section__links {
+          grid-area: side;
+          justify-self: end;
+          margin-bottom: 0;
+        }
+
+        .content {
+          grid-area: content;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <header class="header">
+        <h1 class="name">
+          <span class="firstName">Kat</span>
+          <span class="secondName">Hoang</span>
+        </h1>
+        <div class="pageSubtitle">Front-end Developer</div>
+      </header>
+      <div class="profilePic">
+        <picture>
+          <source
+            srcset="
+              /assets/profile_pic_2x.webp 2x,
+              /assets/profile_pic_1x.webp 1x
+            "
+            type="image/webp"
+          />
+          <source
+            srcset="
+              /assets/profile_pic_2x.png 2x,
+              /assets/profile_pic_1x.png 1x
+            "
+            type="image/png"
+          />
+          <img
+            width="200"
+            height="200"
+            class="profilePic-image"
+            src="/assets/profile_pic_1x.png"
+            alt="Katherine Hoang"
+          />
+        </picture>
+      </div>
+      <div class="content">
+        <section class="section">
+          <h2 class="sectionHeader">About me</h2>
+          <p>
+            I'm a web developer who loves creating UI and meeting people at
+            coding meetups.
+          </p>
+        </section>
+        <section class="section section__links">
+          <h2 class="sectionHeader">Links</h2>
+          <ul class="links">
+            <li class="linkContainer">
+              <a
+                class="link"
+                target="_blank"
+                href="https://www.linkedin.com/in/kat12111199436/"
+                rel="noopener noreferrer"
+              >
+                <img
+                  width="50"
+                  height="57.14"
+                  src="/assets/linkedin.svg"
+                  alt="LinkedIn"
+                />
+              </a>
+            </li>
+            <li>
+              <a
+                class="link"
+                target="_blank"
+                href="https://github.com/k-hoang"
+                rel="noopener noreferrer"
+              >
+                <img
+                  width="50"
+                  height="57.14"
+                  src="/assets/github.svg"
+                  alt="Github"
+                />
+              </a>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
